@@ -6,8 +6,20 @@ export class ServicoUsuarioService {
   usuariosCadastrados:Usuario[] = [];
   
   constructor() { }
-  salvar(usuario:Usuario){
-    this.usuariosCadastrados.push(usuario);
-  }
+  listarTodos() {
+		return this.usuariosCadastrados;
+	}
+ 
+	cadastrar(usuario: Usuario) {
+		this.usuariosCadastrados.push(usuario);
+	}
+ 
+	atualizar(id: number, usuario: Usuario) {
+		this.usuariosCadastrados[id] = usuario;
+	}
+ 
+	excluir(id: number) {
+		this.usuariosCadastrados.splice(id, 1);
+	}
   
 }
