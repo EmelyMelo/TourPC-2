@@ -6,8 +6,7 @@
     <tr>
       <th> Username </th>
       <td> 
-      <input  #campoUsuario="ngModel" type="text" class="quadroDoLogin form-control" [(ngModel)]="usuario.username" 
-      name="username" placeholder="Ex.: joaoemaria" required> 
+      <input #campoUsuario="ngModel" [(ngModel)]="usuario.username" type="text" class="quadroDoLogin form-control"  name="username" placeholder="Ex.: joaoemaria" required> 
 
       <div *ngIf="!campoUsuario.valid && (campoUsuario.dirty || campoUsuario.touched)" class="alert alert-danger">
         Por favor, digite seu nome de usuário</div>

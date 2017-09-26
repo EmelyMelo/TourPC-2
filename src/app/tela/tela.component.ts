@@ -13,16 +13,16 @@ export class TelaComponent implements OnInit {
     ngOnInit() {
         this.items = [
             //COLOCAR LOGO
-        {label: 'Home', routerLink: ['/tela']},
-        {label: 'Fonte', routerLink: ['/tela']},
-        {label: 'HD', routerLink: ['/tela']},
-        {label: 'Memória', routerLink: ['/tela']},
-        {label: 'Placa de áudio', routerLink: ['/tela']},
-        {label: 'Placa de rede', routerLink: ['/tela']},
-        {label: 'Placa de vídeo', routerLink: ['/placa-de-video']},   
-        {label: 'Placa mãe', routerLink: ['/placa-mae']},
-        {label: 'Portas', routerLink: ['/tela']},
-        {label: 'Processador', routerLink: ['/tela']},
+        {label: 'Home', routerLink: ['/tela/home']},
+        {label: 'Fonte', routerLink: ['/tela/fonte']},
+        {label: 'HD', routerLink: ['/tela/hd']},
+        {label: 'Memória', routerLink: ['/tela/memoria']},
+        {label: 'Placa de áudio', routerLink: ['/tela/placa-de-audio']},
+        {label: 'Placa de rede', routerLink: ['/tela/placa-de-rede']},
+        {label: 'Placa de vídeo', routerLink: ['/tela/placa-de-video']},   
+        {label: 'Placa mãe', routerLink: ['/tela/placa-mae']},
+        {label: 'Portas', routerLink: ['/tela/portas']},
+        {label: 'Processador', routerLink: ['/tela/processador']},
         
 
 
