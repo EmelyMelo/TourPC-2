@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { InserirQuestaoComponent } from './inserir-questao/inserir-questao.component';
-import { AdicionarUsuarioComponent } from './adicionar-usuario/adicionar-usuario.component';
 
 
 //PRIME NG
@@ -16,9 +15,11 @@ import { ContextMenuModule, ButtonModule, TabMenuModule, MenubarModule } from 'p
 import { MenuItem} from "primeng/components/common/api";
 import { PasswordModule } from 'primeng/primeng';
 import { InputTextModule } from "primeng/components/inputtext/inputtext";
-
+import {DataTableModule,SharedModule} from 'primeng/primeng';
 import { RadioButtonModule, SlideMenuModule } from 'primeng/primeng';
-import { ServicoUsuarioService } from 'app/servico-usuario.service';
+
+import { UsuarioService } from 'app/usuario.service';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 
 
 
@@ -26,8 +27,8 @@ import { ServicoUsuarioService } from 'app/servico-usuario.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    AdicionarUsuarioComponent,
-    InserirQuestaoComponent
+    InserirQuestaoComponent,
+    ListarUsuariosComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +44,12 @@ import { ServicoUsuarioService } from 'app/servico-usuario.service';
     MenubarModule,
     RadioButtonModule,
     SlideMenuModule, 
-    TelaModule
+    TelaModule,
+    DataTableModule,
+    SharedModule
     
     ],
-  providers: [ServicoUsuarioService],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
