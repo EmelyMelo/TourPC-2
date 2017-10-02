@@ -12,11 +12,9 @@ import { PlacaDeRedeComponent } from 'app/tela/placa-de-rede/placa-de-rede.compo
 import { PlacaMaeComponent } from 'app/tela/placa-mae/placa-mae.component';
 import { PortasComponent } from 'app/tela/portas/portas.component';
 import { ProcessadorComponent } from 'app/tela/processador/processador.component';
-import { HomeComponent } from 'app/tela/home/home.component';
 
 const telasRoutes = [
     {path: 'tela', component: TelaComponent, children: [     
-        {path: 'home', component: HomeComponent},    
         {path: 'fonte', component: FonteComponent},
         {path: 'hd', component: HdComponent},
         {path: 'memoria', component: MemoriaComponent},
@@ -26,7 +24,6 @@ const telasRoutes = [
         {path: 'placa-mae', component: PlacaMaeComponent},
         {path: 'portas', component: PortasComponent},
         {path: 'processador', component: ProcessadorComponent},
-        
     ]},
     
 

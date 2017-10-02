@@ -1,4 +1,4 @@
-import { TabMenuModule } from 'primeng/primeng';
+import { TabMenuModule, ButtonModule } from 'primeng/primeng';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,13 +13,13 @@ import { PlacaDeAudioComponent } from './placa-de-audio/placa-de-audio.component
 import { PlacaDeRedeComponent } from './placa-de-rede/placa-de-rede.component';
 import { PortasComponent } from './portas/portas.component';
 import { ProcessadorComponent } from './processador/processador.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
     imports: [
         CommonModule, 
         TelaRoutingModule,
         TabMenuModule,
+        ButtonModule
         
     ],
     exports: [],
@@ -34,7 +34,6 @@ import { HomeComponent } from './home/home.component';
         PlacaDeRedeComponent, 
         PortasComponent, 
         ProcessadorComponent, 
-        HomeComponent
     ],
     providers: [],
 })

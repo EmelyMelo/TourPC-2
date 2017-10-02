@@ -16,10 +16,11 @@ import { MenuItem} from "primeng/components/common/api";
 import { PasswordModule } from 'primeng/primeng';
 import { InputTextModule } from "primeng/components/inputtext/inputtext";
 import {DataTableModule,SharedModule} from 'primeng/primeng';
-import { RadioButtonModule, SlideMenuModule } from 'primeng/primeng';
+import { RadioButtonModule, SlideMenuModule, GrowlModule } from 'primeng/primeng';
 
 import { UsuarioService } from 'app/usuario.service';
-import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
+import { ListarUsuariosComponent } from 'app/listar-usuarios/listar-usuarios.component';
+
 
 
 
@@ -46,8 +47,9 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
     SlideMenuModule, 
     TelaModule,
     DataTableModule,
-    SharedModule
-    
+    SharedModule,
+    GrowlModule,
+
     ],
   providers: [UsuarioService],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@
   <input #senha [(ngModel)]="usuario.senha" name="senha" type="password" class="quadroDoLogin form-control" id="exampleInputPassword3" required>
   </td>
   <th><!-- COLOCAR UM IF, SE O USUÁRIO E A SENHA ESTIVEREM CORRETOS ENTRA-->
-  <button pButton type="button" [disabled]="!meuForm.valid" routerLink="tela" (click)="entrar();" class="ui-button-success" label="Entre"></button>
+  <button pButton type="button" [disabled]="!meuForm.valid" (click)="entrar()" class="ui-button-success" label="Entre"></button>
   </th>
   </tr>
   </table>
@@ -48,7 +48,7 @@
   </tr>
   <tr>
   <td>
-  <p>Sou:</p> <!-- SELECIONAR O TIPO DE USUARIO -->
+  <p>Você é:</p> <!-- SELECIONAR O TIPO DE USUARIO -->
   <p-radioButton #tipoDeUsuario= "ngModel" name="groupname" value="aluno" label="Aluno" [(ngModel)]="usuario.tipoDeUsuario" required></p-radioButton>
   <p-radioButton #tipoDeUsuario= "ngModel" name="groupname" value="professor" label="Professor" [(ngModel)]="usuario.tipoDeUsuario" required></p-radioButton>
   </td>
@@ -62,3 +62,6 @@
   </table>
   </div>
   </form>
+  
+  <button pButton  label="Lista de usuários" class="ui-button-secondary" (click)="carregarLista()"></button>
+  
