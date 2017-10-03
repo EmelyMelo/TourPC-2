@@ -17,9 +17,9 @@ import { PasswordModule } from 'primeng/primeng';
 import { InputTextModule } from "primeng/components/inputtext/inputtext";
 import {DataTableModule,SharedModule} from 'primeng/primeng';
 import { RadioButtonModule, SlideMenuModule, GrowlModule } from 'primeng/primeng';
-
-import { UsuarioService } from 'app/usuario.service';
-import { ListarUsuariosComponent } from 'app/listar-usuarios/listar-usuarios.component';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
+import { UsuarioService } from './usuario.service';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 
 
@@ -29,7 +29,8 @@ import { ListarUsuariosComponent } from 'app/listar-usuarios/listar-usuarios.com
     AppComponent,
     LoginComponent,
     InserirQuestaoComponent,
-    ListarUsuariosComponent
+    ListarUsuariosComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

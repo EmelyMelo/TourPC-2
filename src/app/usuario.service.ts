@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from 'app/models/Usuario';
 import { Router } from '@angular/router';
+import { Usuario } from './models/Usuario';
 
 @Injectable()
 export class UsuarioService {
@@ -23,7 +23,6 @@ export class UsuarioService {
         alert("Por favor, faça o seu cadastro!")
       }
     }
-   
     return ehValido;	
   }
 }
