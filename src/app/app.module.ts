@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { InserirQuestaoComponent } from './inserir-questao/inserir-questao.component';
 
-
 //PRIME NG
 import { AccordionModule, ChipsModule } from 'primeng/primeng';     
 import { ContextMenuModule, ButtonModule, TabMenuModule, MenubarModule } from 'primeng/primeng';
