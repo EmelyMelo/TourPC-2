@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/components/common/api";
 import { Router, ActivatedRoute } from '@angular/router';
+import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-tela',
@@ -11,8 +12,9 @@ export class TelaComponent implements OnInit {
    user:String;
   items: MenuItem[];
     constructor(private route: ActivatedRoute,
-        private router: Router){
-
+        private router: Router, private usuarioService:UsuarioService){
+            let usuarios = this.usuarioService.getUsuarios();
+            let u = usuarios;
     }
     ngOnInit() {
         this.items = [

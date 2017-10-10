@@ -5,8 +5,10 @@ import { Usuario } from './models/Usuario';
 @Injectable()
 export class UsuarioService {
   
-  private usuarios: Usuario[] = [];
-  constructor(private route: Router) { }
+  private usuarios: Usuario[] = new Array<Usuario>();
+  constructor(private route: Router) {
+  }
+
   usuario: Usuario= new Usuario();
   getUsuarios() {
     return this.usuarios;

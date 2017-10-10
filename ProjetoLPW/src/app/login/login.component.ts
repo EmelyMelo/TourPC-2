@@ -10,10 +10,14 @@ import { UsuarioService } from '../usuario.service';
 	styleUrls: ['./login.component.css'],
 	})
 	export class LoginComponent implements OnInit {
-	usuarios: Usuario[] = [];
-	msgs: Message[] = [];
-	usuario: Usuario = new Usuario(); 
-	constructor(private usuarioService: UsuarioService, private route: Router) {}
+	usuarios: Usuario[];
+	msgs: Message[];
+	usuario: Usuario; 
+	constructor(private usuarioService: UsuarioService, private route: Router) {
+		this.usuarios = [];
+		this.msgs = [];
+		this.usuario = new Usuario();		
+	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();
 	}
