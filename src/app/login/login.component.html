@@ -1,8 +1,7 @@
-<!-- LOGIN -->
-<br><br><br>
+<div class="ui-g">
 <form #meuForm="ngForm">
 <p-growl [(value)]="msgs"></p-growl>   
-<div class="divDeEntrada ">
+<div class="divDeEntrada ui-g-1">
 <table id="login" class="tabela">
 <router-outlet></router-outlet> <!-- ROTAS -->
   <tr>
@@ -22,7 +21,7 @@
   </tr>
   <tr>
   <td> 
-  <button pButton type="button" routerLink="cadastro" class="ui-button-info ui-growl-container" label="Nova Conta"></button>  
+  <button pButton type="button" routerLink="/cadastro" class="ui-button-info ui-growl-container" label="Nova Conta"></button>  
   </td> 
   <td> 
   <button pButton  label="Lista de usuários" class="ui-button-secondary" (click)="carregarLista()"></button>
@@ -31,6 +30,7 @@
   </table>
   </div>
   </form>
+</div>
 
   
   

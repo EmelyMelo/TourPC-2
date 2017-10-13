@@ -5,8 +5,10 @@ import { Usuario } from './models/Usuario';
 @Injectable()
 export class UsuarioService {
   
-  private usuarios: Usuario[] = [];
-  constructor(private route: Router) { }
+  private usuarios: Usuario[] = new Array<Usuario>();
+  constructor(private route: Router) {
+  }
+
   usuario: Usuario= new Usuario();
   getUsuarios() {
     return this.usuarios;
@@ -19,8 +21,6 @@ export class UsuarioService {
     for(let i:number =0;i<this.usuarios.length;i++){
       if(this.usuarios[i].username == this.usuario.username && this.usuarios[i].senha == this.usuario.senha){
         ehValido = true;
-      }else{
-        alert("Por favor, faça o seu cadastro!")
       }
     }
     return ehValido;	

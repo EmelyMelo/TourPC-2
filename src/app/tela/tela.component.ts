@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from "primeng/components/common/api";
+import { Router, ActivatedRoute } from '@angular/router';
+import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-tela',
@@ -7,9 +9,13 @@ import { MenuItem } from "primeng/components/common/api";
   styleUrls: ['./tela.component.css']
 })
 export class TelaComponent implements OnInit {
-
+   user:String;
   items: MenuItem[];
-
+    constructor(private route: ActivatedRoute,
+        private router: Router, private usuarioService:UsuarioService){
+            let usuarios = this.usuarioService.getUsuarios();
+            let u = usuarios;
+    }
     ngOnInit() {
         this.items = [
             //COLOCAR LOGO
@@ -23,9 +29,10 @@ export class TelaComponent implements OnInit {
         {label: 'Placa mãe', routerLink: ['/tela/placa-mae']},
         {label: 'Portas', routerLink: ['/tela/portas']},
         {label: 'Processador', routerLink: ['/tela/processador']},
-        
 
 
     ];
+    this.user = this.route.snapshot.params['user'];
+    
 }      
 }

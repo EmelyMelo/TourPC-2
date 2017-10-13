@@ -1,1 +1,17 @@
-<h4>Inserir Questão</h4>
+<h3>Inserir Questões</h3>
+<div class="ui-g-6">
+<p>Selecione o assunto:</p>
+<p-listbox [options]="componentes" [(ngModel)]="selectedComponent"></p-listbox>
+</div>
+<div class="ui-g-6">
+<p>Enunciado:</p>
+<textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+</div>
+<p>Resposta correta:</p>
+<input type="text" pInputText [(ngModel)]="property"/>
+<p>Se a questão possui alternativas indique-as abaixo:</p>
+<input type="text" pInputText [(ngModel)]="property"/>
+<input type="text" pInputText [(ngModel)]="property"/>
+<input type="text" pInputText [(ngModel)]="property"/>
+<input type="text" pInputText [(ngModel)]="property"/>
+

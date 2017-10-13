@@ -10,10 +10,14 @@ import { UsuarioService } from '../usuario.service';
 	styleUrls: ['./login.component.css'],
 	})
 	export class LoginComponent implements OnInit {
-	usuarios: Usuario[] = [];
-	msgs: Message[] = [];
-	usuario: Usuario = new Usuario(); 
-	constructor(private usuarioService: UsuarioService, private route: Router) {}
+	usuarios: Usuario[];
+	msgs: Message[];
+	usuario: Usuario; 
+	constructor(private usuarioService: UsuarioService, private route: Router) {
+		this.usuarios = [];
+		this.msgs = [];
+		this.usuario = new Usuario();		
+	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();
 	}
@@ -29,21 +33,6 @@ import { UsuarioService } from '../usuario.service';
 	carregarLista(){
 		this.route.navigate(['usuarios']);
 	}
-	showSuccess() {
-        this.msgs = [];
-        this.msgs.push({severity:'success', summary:'Success Message', detail:'Order submitted'});
-    }
-
-    showInfo() {
-        this.msgs = [];
-        this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
-    }
-
-    showWarn() {
-        this.msgs = [];
-        this.msgs.push({severity:'warn', summary:'Warn Message', detail:'There are unsaved changes'});
-    }
-
     showError() {
         this.msgs = [];
         this.msgs.push({severity:'error', summary:'Login inexistente', detail:'Verifique o login e a senha ou cadastre-se!'});

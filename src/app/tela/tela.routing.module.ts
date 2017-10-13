@@ -3,15 +3,16 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { FonteComponent } from 'app/tela/fonte/fonte.component';
-import { HdComponent } from 'app/tela/hd/hd.component';
-import { MemoriaComponent } from 'app/tela/memoria/memoria.component';
-import { PlacaDeAudioComponent } from 'app/tela/placa-de-audio/placa-de-audio.component';
-import { PlacaDeVideoComponent } from 'app/tela/placa-de-video/placa-de-video.component';
-import { PlacaDeRedeComponent } from 'app/tela/placa-de-rede/placa-de-rede.component';
-import { PlacaMaeComponent } from 'app/tela/placa-mae/placa-mae.component';
-import { PortasComponent } from 'app/tela/portas/portas.component';
-import { ProcessadorComponent } from 'app/tela/processador/processador.component';
+
+import { ProcessadorComponent } from './processador/processador.component';
+import { PortasComponent } from './portas/portas.component';
+import { PlacaMaeComponent } from './placa-mae/placa-mae.component';
+import { PlacaDeVideoComponent } from './placa-de-video/placa-de-video.component';
+import { PlacaDeRedeComponent } from './placa-de-rede/placa-de-rede.component';
+import { PlacaDeAudioComponent } from './placa-de-audio/placa-de-audio.component';
+import { MemoriaComponent } from './memoria/memoria.component';
+import { HdComponent } from './hd/hd.component';
+import { FonteComponent } from './fonte/fonte.component';
 
 const telasRoutes = [
     {path: 'tela', component: TelaComponent, children: [     

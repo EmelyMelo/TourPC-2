@@ -21,7 +21,7 @@ export class CadastroComponent implements OnInit {
   }
   salvar(usuario: Usuario){
     this.usuarioService.addUsuario(this.usuario);
-    this.route.navigate(['tela']);
+    this.route.navigate(['login']);
   }
   }
  
