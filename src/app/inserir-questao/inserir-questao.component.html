@@ -6,12 +6,16 @@
 <div class="ui-g-6">
 <p>Enunciado:</p>
 <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
-</div>
 <p>Resposta correta:</p>
 <input type="text" pInputText [(ngModel)]="property"/>
 <p>Se a questão possui alternativas indique-as abaixo:</p>
-<input type="text" pInputText [(ngModel)]="property"/>
-<input type="text" pInputText [(ngModel)]="property"/>
-<input type="text" pInputText [(ngModel)]="property"/>
-<input type="text" pInputText [(ngModel)]="property"/>
+<input type="text" pInputText [(ngModel)]="a"/><br><br>
+<input type="text" pInputText [(ngModel)]="b"/><br><br>
+<input type="text" pInputText [(ngModel)]="c"/><br><br>
+<input type="text" pInputText [(ngModel)]="d"/> <br><!-- MUDAR O A B C D -->
+<br>
+<button pButton type="button" (click)="listar()" class="ui-button-info ui-growl-container" label="Listar Questões"></button>
+<button pButton type="button" (click)="salvar()" class="ui-button-success ui-growl-container" label="Salvar"></button>
+<!-- COLOCAR CONDIÇÃO DE TODOS OS IMPUTS ESTAREM COM ALGUMA COISA-->
+</div>  
 

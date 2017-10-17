@@ -7,13 +7,13 @@
   <tr>
   <th> Username </th>
   <td> 
-  <input #campoUsuario="ngModel" [(ngModel)]="usuario.username" type="text" class="quadroDoLogin form-control"  name="username" placeholder="Ex.: joaoemaria" required> 
-    <div *ngIf="!campoUsuario.valid && (campoUsuario.dirty || campoUsuario.touched)" class="alert alert-danger">
+  <input #campoUsuario="ngModel" [(ngModel)]="usuario.username" type="text" class="quadroDoLogin form-control" pInputText  name="username" placeholder="Ex.: joaoemaria" required> 
+    <div *ngIf="!campoUsuario.valid && (campoUsuario.dirty || campoUsuario.touched)"  class="alert alert-danger">
     Por favor, digite seu nome de usuário</div>
   </td>
   <th>Senha</th>
   <td>
-  <input #senha [(ngModel)]="usuario.senha" name="senha" type="password" class="quadroDoLogin form-control" required>
+  <input #senha [(ngModel)]="usuario.senha" pInputText name="senha" type="password" class="quadroDoLogin form-control" required>
   </td>
   <th><!-- COLOCAR UM IF, SE O USUÁRIO E A SENHA ESTIVEREM CORRETOS ENTRA-->
   <button pButton type="button" [disabled]="!meuForm.valid" (click)="entrar()" class="ui-button-success ui-growl-container" label="Entre"></button>

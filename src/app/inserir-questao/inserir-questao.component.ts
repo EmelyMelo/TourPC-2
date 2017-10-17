@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SelectItem} from 'primeng/primeng';
 import { Message } from 'primeng/components/common/api';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,15 +10,13 @@ import { Message } from 'primeng/components/common/api';
   styleUrls: ['./inserir-questao.component.css']
 })
 export class InserirQuestaoComponent implements OnInit {
-  route: any;
   msgs: Message[];
   componentes: SelectItem[];
+  selectedComponent: string;
   
-      selectedComponent: string;
-  
-      constructor() {
+      constructor(private route: Router) {
           this.componentes = [];
-          this.componentes.push({label:'Fonte', value:'fonte'});
+          this.componentes.push({label:'Fonte', value:'fonte'}); 
           this.componentes.push({label:'HD', value:'hd'});
           this.componentes.push({label:'Memória', value:'memoria'});
           this.componentes.push({label:'Placa de áudio', value:'placa-de-audio'});
@@ -30,8 +29,15 @@ export class InserirQuestaoComponent implements OnInit {
   ngOnInit() {
   }
   salvar(){
-    this.msgs.push({severity:'sucess', summary:'Operação realizada com sucesso', detail:'Questão enviada'});
+    this.showSalvar();
     this.route.navigate(["tela"]);
+    
   }
-
+  showSalvar(){
+    this.msgs = [];
+    this.msgs.push({severity:'sucess', summary:'Operação realizada com sucesso', detail:'Questão enviada'});
+  }
+  listar(){
+    // FAZER TELA DE LISTAGEM (CRUD)
+    }
 }
