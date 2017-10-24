@@ -1,9 +1,11 @@
+import { QuestaoService } from './../questao.service';
 import { Component, OnInit } from '@angular/core';
 import {SelectItem} from 'primeng/primeng';
 import { Message } from 'primeng/components/common/api';
 import { Router } from '@angular/router';
+import { Questao } from 'app/models/Questao';
 
-
+//FALTA ARMAZENAR AS QUESTÕES FEITAS
 @Component({
   selector: 'app-inserir-questao',
   templateUrl: './inserir-questao.component.html',
@@ -12,9 +14,12 @@ import { Router } from '@angular/router';
 export class InserirQuestaoComponent implements OnInit {
   msgs: Message[];
   componentes: SelectItem[];
+  alternativaMarcada: string;
   selectedComponent: string;
+  questao: Questao = new Questao();
   
-      constructor(private route: Router) {
+  
+      constructor(private route: Router, private questaoService: QuestaoService) {
           this.componentes = [];
           this.componentes.push({label:'Fonte', value:'fonte'}); 
           this.componentes.push({label:'HD', value:'hd'});
@@ -28,7 +33,8 @@ export class InserirQuestaoComponent implements OnInit {
       }
   ngOnInit() {
   }
-  salvar(){
+  salvar(questao: Questao){
+    this.questaoService.adicionar(this.questao);
     this.showSalvar();
     this.route.navigate(["tela"]);
     
@@ -38,6 +44,6 @@ export class InserirQuestaoComponent implements OnInit {
     this.msgs.push({severity:'sucess', summary:'Operação realizada com sucesso', detail:'Questão enviada'});
   }
   listar(){
-    // FAZER TELA DE LISTAGEM (CRUD)
-    }
+    this.route.navigate(["questoes"]);
+  }
 }

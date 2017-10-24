@@ -20,7 +20,7 @@ export class CadastroComponent implements OnInit {
 
   }
   salvar(usuario: Usuario){
-    this.usuarioService.addUsuario(this.usuario);
+    this.usuarioService.add(this.usuario);
     this.route.navigate(['login']);
   }
   }

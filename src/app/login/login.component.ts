@@ -16,7 +16,8 @@ import { UsuarioService } from '../usuario.service';
 	constructor(private usuarioService: UsuarioService, private route: Router) {
 		this.usuarios = [];
 		this.msgs = [];
-		this.usuario = new Usuario();		
+		this.usuario = new Usuario();	
+		console.log("bla")
 	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();
@@ -30,10 +31,7 @@ import { UsuarioService } from '../usuario.service';
 			this.showError();
 		}
 		}
-	carregarLista(){
-		this.route.navigate(['usuarios']);
-	}
-    showError() {
+	showError() {
         this.msgs = [];
         this.msgs.push({severity:'error', summary:'Login inexistente', detail:'Verifique o login e a senha ou cadastre-se!'});
     }

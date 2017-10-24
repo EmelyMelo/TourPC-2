@@ -1,5 +1,5 @@
+import { ListarQuestoesComponent } from './listar-questoes/listar-questoes.component';
 import { InserirQuestaoComponent } from './inserir-questao/inserir-questao.component';
-import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 import { TelaComponent } from './tela/tela.component';
 import { LoginComponent } from './login/login.component';
 
@@ -12,7 +12,7 @@ const APP_ROUTES: Routes = [
     {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'tela/:user', component: TelaComponent},
-    {path: 'usuarios', component: ListarUsuariosComponent},
+    {path: 'questoes', component: ListarQuestoesComponent},
     {path: 'cadastro', component: CadastroComponent}, 
     {path: 'inicio', component: TelaComponent},
     {path: 'inserir-questao', component: InserirQuestaoComponent} 

@@ -13,7 +13,7 @@ export class UsuarioService {
   getUsuarios() {
     return this.usuarios;
   }
-  addUsuario(usuario: Usuario){
+  add(usuario: Usuario){
     this.usuarios.push(usuario);
   }
   verificar(usuario:Usuario){
