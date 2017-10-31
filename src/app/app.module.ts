@@ -1,3 +1,4 @@
+import { QuestaoService } from './questao.service';
 import { TelaModule } from './tela/tela.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -54,7 +55,7 @@ import { ListboxModule } from 'primeng/components/listbox/listbox';
     InputTextareaModule,
     ListboxModule
   ],
-  providers: [UsuarioService],
+  providers: [UsuarioService, QuestaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

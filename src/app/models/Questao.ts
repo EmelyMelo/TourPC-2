@@ -1,6 +1,6 @@
 export class Questao{
-    // checkbox assunto: 
+    id: number;
+    assunto: String;
     enunciado: String;
-    // respostasPossiveis[];
     respostaCerta: String;
 }

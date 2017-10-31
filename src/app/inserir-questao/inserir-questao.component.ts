@@ -5,7 +5,6 @@ import { Message } from 'primeng/components/common/api';
 import { Router } from '@angular/router';
 import { Questao } from 'app/models/Questao';
 
-//FALTA ARMAZENAR AS QUESTÕES FEITAS
 @Component({
   selector: 'app-inserir-questao',
   templateUrl: './inserir-questao.component.html',
@@ -33,11 +32,11 @@ export class InserirQuestaoComponent implements OnInit {
       }
   ngOnInit() {
   }
-  salvar(questao: Questao){
+  salvar(){
+    console.log(this.questao);
     this.questaoService.adicionar(this.questao);
     this.showSalvar();
-    this.route.navigate(["tela"]);
-    
+    alert("salvo");    
   }
   showSalvar(){
     this.msgs = [];

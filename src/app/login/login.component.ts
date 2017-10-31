@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from "../models/Usuario";
 import { Router } from '@angular/router';
-import {Message} from 'primeng/components/common/api';
+import { Message } from 'primeng/components/common/api';
 import { UsuarioService } from '../usuario.service';
 
 @Component({
@@ -17,7 +17,6 @@ import { UsuarioService } from '../usuario.service';
 		this.usuarios = [];
 		this.msgs = [];
 		this.usuario = new Usuario();	
-		console.log("bla")
 	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();
