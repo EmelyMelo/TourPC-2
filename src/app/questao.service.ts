@@ -4,8 +4,10 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class QuestaoService {
+
   private questoes: Questao[] = new Array<Questao>();
   questao: Questao = new Questao();
+
   constructor(private route: Router) {
     this.questao.id = 0;    
     let q1 = new Questao();
@@ -30,7 +32,8 @@ export class QuestaoService {
       this.questoes.slice(id,1);
     }
   }
-  atualizar(){
-
+  atualizar(id: number){
+    if(this.questao.id == id){
+    }
   }
 }

@@ -1,4 +1,6 @@
 <p-dataTable [value]="listar()">
-  <p-column field="assunto" header="Assuntos"></p-column>
+  <p-column field="assunto" header="Assuntos">
+      <button pButton type="button" (click)="editar()" class="ui-button-info ui-growl-container" label="Editar Questões"></button>
+    </p-column>  
   <p-column field="enunciado" header="Questões"></p-column>
   </p-dataTable>
