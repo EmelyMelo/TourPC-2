@@ -21,6 +21,8 @@ import { UsuarioService } from './usuario.service';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { ListboxModule } from 'primeng/components/listbox/listbox';
+import { DialogModule } from 'primeng/components/dialog/dialog';
+import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -36,6 +38,7 @@ import { ListboxModule } from 'primeng/components/listbox/listbox';
   ],
   imports: [
     BrowserModule,
+    DialogModule,
     FormsModule,
     routing, 
     AccordionModule,
@@ -53,7 +56,8 @@ import { ListboxModule } from 'primeng/components/listbox/listbox';
     SharedModule,
     GrowlModule,
     InputTextareaModule,
-    ListboxModule
+    ListboxModule,
+    BrowserAnimationsModule
   ],
   providers: [UsuarioService, QuestaoService],
   bootstrap: [AppComponent]
