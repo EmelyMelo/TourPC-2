@@ -23,6 +23,7 @@ import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtexta
 import { ListboxModule } from 'primeng/components/listbox/listbox';
 import { DialogModule } from 'primeng/components/dialog/dialog';
 import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/listar-todas-questoes.component';
 
 
 
@@ -33,7 +34,8 @@ import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginComponent,
     InserirQuestaoComponent,
     CadastroComponent,
-    ListarQuestoesComponent
+    ListarQuestoesComponent,
+    ListarTodasQuestoesComponent
 
   ],
   imports: [

@@ -20,6 +20,7 @@ export class TelaComponent implements OnInit {
         this.items = [
             //COLOCAR LOGO
         {label: 'Home', routerLink: ['/tela/home']},
+        {label: 'Questões', routerLink: ['/questoes']},        
         {label: 'Fonte', routerLink: ['/tela/fonte']},
         {label: 'HD', routerLink: ['/tela/hd']},
         {label: 'Memória', routerLink: ['/tela/memoria']},

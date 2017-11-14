@@ -1,4 +1,4 @@
-<p-dataTable [value]="listar()" (onRowDblclick)="visualizarDetalhesQuestao($event)" [paginator]="true" rows="15" [responsive]="true">
+<p-dataTable [value]="questoes" (onRowDblclick)="visualizarDetalhesQuestao($event)" [paginator]="true" rows="15" [responsive]="true">
   <p-column field="assunto" header="Assuntos" [sortable]="true">
   </p-column>  
   <p-column field="enunciado" header="Questões" [sortable]="true"></p-column>

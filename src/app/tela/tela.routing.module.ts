@@ -13,6 +13,7 @@ import { PlacaDeAudioComponent } from './placa-de-audio/placa-de-audio.component
 import { MemoriaComponent } from './memoria/memoria.component';
 import { HdComponent } from './hd/hd.component';
 import { FonteComponent } from './fonte/fonte.component';
+import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/listar-todas-questoes.component';
 
 const telasRoutes = [
     {path: 'tela', component: TelaComponent, children: [     
@@ -25,6 +26,7 @@ const telasRoutes = [
         {path: 'placa-mae', component: PlacaMaeComponent},
         {path: 'portas', component: PortasComponent},
         {path: 'processador', component: ProcessadorComponent},
+        {path: 'listar-todas-questoes', component: ListarTodasQuestoesComponent}
     ]},
     
 

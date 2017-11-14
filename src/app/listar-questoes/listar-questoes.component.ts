@@ -38,9 +38,18 @@ export class ListarQuestoesComponent implements OnInit {
     this.displayDialog = false;
     this.questaoService.questoes = this.questoes;
   }
+  
   deletar() {
-    let id = this.encontrarQuestaoSelecionadaIndex();
-    this.questoes = this.questoes.filter((val, i) => i != id);
+    //let id = this.encontrarQuestaoSelecionadaIndex();
+    let questoesTemp = this.questoes.slice(0);
+    let index = 0;
+    questoesTemp.map(elemento => { 
+      if(elemento.id == this.questao.id){
+        questoesTemp.splice(index, 1);
+      }
+      index++;
+    });
+    this.questoes = questoesTemp;
     this.questao = null;
     this.displayDialog = false;
     this.questaoService.questoes = this.questoes;
@@ -48,7 +57,9 @@ export class ListarQuestoesComponent implements OnInit {
   visualizarDetalhesQuestao(event) {
     this.novaQuestao = false;
     this.questao = this.cloneQuestao(event.data);
+    
     this.displayDialog = true;
+  
     
   }
   cloneQuestao(questao: Questao): Questao {
@@ -60,9 +71,6 @@ export class ListarQuestoesComponent implements OnInit {
   }
   encontrarQuestaoSelecionadaIndex(): number {
     return this.questoes.indexOf(this.questaoSelecionada);
-  }
-  listar() {
-    return this.questaoService.listar();
   }
 }
 

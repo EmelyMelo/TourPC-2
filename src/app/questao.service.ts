@@ -13,9 +13,11 @@ export class QuestaoService {
     let q1 = new Questao();
     q1.assunto = "fonte";
     q1.enunciado = "bla";
+    q1.id = 1;
     let q2 = new Questao();
     q2.assunto = "hd";
     q2.enunciado = "ble";
+    q2.id = 2;
     this.questoes.push(q1);
     this.questoes.push(q2);
    }

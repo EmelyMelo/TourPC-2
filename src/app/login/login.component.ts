@@ -8,30 +8,30 @@ import { UsuarioService } from '../usuario.service';
 	selector: 'app-login',
 	templateUrl: './login.component.html',
 	styleUrls: ['./login.component.css'],
-	})
-	export class LoginComponent implements OnInit {
+})
+export class LoginComponent implements OnInit {
 	usuarios: Usuario[];
 	msgs: Message[];
-	usuario: Usuario; 
+	usuario: Usuario;
 	constructor(private usuarioService: UsuarioService, private route: Router) {
 		this.usuarios = [];
 		this.msgs = [];
-		this.usuario = new Usuario();	
+		this.usuario = new Usuario();
 	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();
 	}
-	entrar(usuario: Usuario){
-		let podePassar:boolean = false;	
+	entrar(usuario: Usuario) {
+		let podePassar: boolean = false;
 		podePassar = this.usuarioService.verificar(this.usuario);
-		if(podePassar){
+		if (podePassar) {
 			this.route.navigate(["tela"]);
-		}else{
+		} else {
 			this.showError();
 		}
-		}
+	}
 	showError() {
-        this.msgs = [];
-        this.msgs.push({severity:'error', summary:'Login inexistente', detail:'Verifique o login e a senha ou cadastre-se!'});
-    }
+		this.msgs = [];
+		this.msgs.push({ severity: 'error', summary: 'Login inexistente', detail: 'Verifique o login e a senha ou cadastre-se!' });
+	}
 }
