@@ -35,7 +35,8 @@ import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/lis
     InserirQuestaoComponent,
     CadastroComponent,
     ListarQuestoesComponent,
-    ListarTodasQuestoesComponent
+    ListarTodasQuestoesComponent,
+
 
   ],
   imports: [
