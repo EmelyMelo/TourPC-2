@@ -9,7 +9,7 @@ export class UsuarioService {
   constructor(private route: Router) {
   }
 
-  usuario: Usuario= new Usuario();
+  usuario: Usuario;
   getUsuarios() {
     return this.usuarios;
   }

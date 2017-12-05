@@ -11,7 +11,7 @@ import { QuestaoService } from 'app/questao.service';
 export class ListarQuestoesComponent implements OnInit {
   questoes: Questao[];
   displayDialog: boolean;
-  questao: Questao = new Questao();
+  questao: Questao;
   questaoSelecionada: Questao;  
   novaQuestao: boolean;
   
@@ -23,7 +23,7 @@ export class ListarQuestoesComponent implements OnInit {
   }
   showDialogToAdd() {
     this.novaQuestao = true;
-    this.questao = new Questao();
+    this.questao;
     this.displayDialog = true;
   }
   salvar() {
@@ -63,7 +63,7 @@ export class ListarQuestoesComponent implements OnInit {
     
   }
   cloneQuestao(questao: Questao): Questao {
-    let quest = new Questao();
+    let quest;
     for (let prop in questao) {
       quest[prop] = questao[prop];
     }

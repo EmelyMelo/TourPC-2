@@ -1,8 +1,11 @@
+import { BancoFirebaseConfig } from './../environments/Bancofirebase.config';
 import { QuestaoService } from './questao.service';
 import { TelaModule } from './tela/tela.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms'; 
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 //TELAS+ROTAS
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -63,7 +66,9 @@ import { BancoFirebaseComponent } from './banco-firebase/banco-firebase.componen
     InputTextareaModule,
     ListboxModule,
     BrowserAnimationsModule,
-  ],
+    AngularFireModule.initializeApp(BancoFirebaseConfig),
+    AngularFirestoreModule.enablePersistence(),
+   ],
   providers: [UsuarioService, QuestaoService],
   bootstrap: [AppComponent]
 })

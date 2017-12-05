@@ -10,7 +10,7 @@ import { UsuarioService } from '../usuario.service';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit {
-  usuario: Usuario = new Usuario();
+  usuario: Usuario;
   user: Usuario;
   constructor(private usuarioService: UsuarioService,  private route: Router, private rotaAtiva: ActivatedRoute) {
     this.user = this.rotaAtiva.snapshot.params['user'];

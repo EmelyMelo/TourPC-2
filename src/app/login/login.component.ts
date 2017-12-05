@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 	constructor(private usuarioService: UsuarioService, private route: Router) {
 		this.usuarios = [];
 		this.msgs = [];
-		this.usuario = new Usuario();
+		this.usuario;
 	}
 	ngOnInit() {
 		this.usuarios = this.usuarioService.getUsuarios();

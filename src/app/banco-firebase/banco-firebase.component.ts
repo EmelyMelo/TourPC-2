@@ -9,7 +9,7 @@ import * as firebase from "firebase";
 export class BancoFirebaseComponent implements OnInit {
 
   constructor() { 
- //   var firebase = require("firebase"); aqui tá o erro
+ //  var firebase = require("firebase");// aqui tá o erro
       // Set the configuration for your app
   // TODO: Replace with your project's config object
   var config = {
