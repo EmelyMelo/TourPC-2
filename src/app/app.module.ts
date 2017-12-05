@@ -22,8 +22,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { ListboxModule } from 'primeng/components/listbox/listbox';
 import { DialogModule } from 'primeng/components/dialog/dialog';
-import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/listar-todas-questoes.component';
+import { BancoFirebaseComponent } from './banco-firebase/banco-firebase.component';
 
 
 
@@ -36,6 +37,7 @@ import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/lis
     CadastroComponent,
     ListarQuestoesComponent,
     ListarTodasQuestoesComponent,
+    BancoFirebaseComponent,
 
 
   ],
@@ -60,7 +62,7 @@ import { ListarTodasQuestoesComponent } from 'app/tela/listar-todas-questoes/lis
     GrowlModule,
     InputTextareaModule,
     ListboxModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [UsuarioService, QuestaoService],
   bootstrap: [AppComponent]

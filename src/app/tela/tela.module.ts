@@ -20,7 +20,7 @@ import { ResponderComponent } from './responder/responder.component';
         CommonModule, 
         TelaRoutingModule,
         TabMenuModule,
-        ButtonModule
+        ButtonModule,
         
     ],
     exports: [],
